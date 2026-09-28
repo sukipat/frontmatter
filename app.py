@@ -26,3 +26,10 @@ def receive():
     if not valid:
         abort(403)
     return "ok", 200
+
+@app.get("/privacy")
+def privacy():
+    return """<h1>Privacy Policy</h1>
+    <p>This app receives Instagram messages you send to our account, extracts place names,
+    and saves them to your list. We store your Instagram-scoped ID and saved places.
+    To delete your data, message us or email you@example.com.</p>""", 200
